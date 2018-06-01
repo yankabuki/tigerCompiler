@@ -1,0 +1,15 @@
+let
+	var k := 0
+	function Fact(n : int) : int =
+		let
+			var res := 1
+		in
+			for i := 2 to n do
+				res := res * i;
+			res 
+		end
+in
+	print("digite o valor:");
+	k := Fact(toint(getchar()));
+	print("fatorial é: " + tostr(k) + "\n")
+end

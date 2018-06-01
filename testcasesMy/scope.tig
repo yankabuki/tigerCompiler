@@ -1,0 +1,13 @@
+let
+	var v := "1"
+in
+	let var v := "3"
+		in print(v + "\n")
+	end;
+	for i := 0 to 9 do (
+		for j := 0 to 9 do (
+			if j = 5 then let in break end
+			else print(tostr(i) + tostr(j) + "\n")
+		);
+	)
+end

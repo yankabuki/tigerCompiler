@@ -1,0 +1,44 @@
+==========Compilador=Tiger===============
++	Aluno: Yan Hiroaki Kabuki			+
++	RA 64440							+
++	Compilador Tiger desenvolvido em C	+
++										+
+=========================================
+
+Para compilar, é necessário possuir o GCC instalado,
+juntamente com as bibliotecas para compilar aplicações
+em 32bits.
+
+Para construir o compilador, execute os comandos:
+	make clean && make all
+
+O programa está estruturado segundo os diretórios:
+	/src contém o código fonte do compilador
+	/include contém os arquivos .h necessários
+	/runtime contém o runtime dos programas em Tiger
+	/testcasesAppel contém os arquivos de teste disponibilizados
+	/testcasesMy contémm os arquivos de teste pessoal
+	/obj contém os módulos compilados
+
+Foi desenvolvido algumas extensões para a biblioteca padrão:
+	tostr(int) converte um inteiro para string
+	toint(str) converte uma string para inteiro
+
+Os operadores + - * / = <> são sobrecarregados:
+	string1 + string2 concatena string1 a string2, gerando uma nova string
+	string1 - string2 remove string2 de string1, gerando uma nova string
+	string1 / string2 análogo a string1 - string2
+	string1 * int gera uma nova string contendo string1 int vezes
+	string1 = [string2, nil] compara o conteúdo das strings
+	
+	para vetores e matrizes os operadores são análogos
+
+As funções do sistema são:
+	print(str)
+	toint(int)
+	tostr(str)
+	ord(str)
+	chr(int)
+	exit(int)
+	getchar()
+	flush()

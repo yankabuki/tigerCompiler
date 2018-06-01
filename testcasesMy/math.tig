@@ -1,0 +1,7 @@
+let
+in
+	print("1 + 6 * 5 = "   + tostr(1 + 6 * 5)   + "\n");
+	print("(1 + 6) * 5 = " + tostr((1 + 6) * 5) + "\n");
+	print("1 + 6 / 5 = "   + tostr(1 + 6 / 5)   + "\n");
+	print("(1 + 6) / 5 = " + tostr((1 + 6) / 5) + "\n");
+end

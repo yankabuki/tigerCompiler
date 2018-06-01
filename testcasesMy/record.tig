@@ -1,0 +1,17 @@
+
+let
+	type intlist = {hd: int, tl: intlist} 
+	var lis:intlist := nil
+	var i:intlist := nil
+in
+	lis := intlist{hd = 0, tl = nil};
+	i := lis;
+	for k := 1 to 100 do (
+		lis.tl := intlist{hd = k, tl = nil};
+		lis := lis.tl;
+	);
+	while i <> nil do (
+		print(tostr(i.hd) + "\n");
+		i := i.tl
+	)
+end

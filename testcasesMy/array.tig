@@ -1,0 +1,11 @@
+let
+	type  arrtype = array of int
+	var arr1:arrtype := arrtype [10] of 4
+	var n := 1
+in
+	for i := 0 to 9 do (
+		arr1[i] := arr1[i] + 1;
+		print(tostr(arr1[i]));
+		print("\n")
+	)
+end

@@ -1,0 +1,31 @@
+let 
+
+ type list = {first: int, rest: list}
+ 
+ function readlist() : list =
+    let
+        var i := getchar()
+     in if i = " " | i = "\n"
+         then nil
+         else list{first=toint(i),rest=readlist()}
+    end
+    
+ function merge(a: list, b: list) : list =
+   if a=nil then b
+   else if b=nil then a
+   else if a.first < b.first 
+      then list{first=a.first,rest=merge(a.rest,b)}
+      else list{first=b.first,rest=merge(a,b.rest)}
+
+ function printlist(l: list) =
+   if l=nil then print("\n")
+   else (print(tostr(l.first)); print(" "); printlist(l.rest))
+
+ var list1 := readlist()
+ var list2 := readlist()
+
+
+  /* BODY OF MAIN PROGRAM */
+ in printlist(merge(list1,list2))
+end
+
