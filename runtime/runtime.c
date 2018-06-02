@@ -20,8 +20,8 @@ void eexit(int code) {
 }
 int *initArray(int size, int init) {
 	int i;
-	int *a = (int *)malloc(size*sizeof(int));
-	for(i = 0; i < size; i++)
+	int *a = (int *)malloc((size + 1) * sizeof(int));
+	for(i = 0; i < size + 1; i++)
 		a[i] = init;
 	return a;
 }
